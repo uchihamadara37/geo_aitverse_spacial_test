@@ -40,3 +40,6 @@ frontend/.vercel
 # typescript
 *.tsbuildinfo
 frontend/next-env.d.ts
+
+# python
+**/__pycache__/
