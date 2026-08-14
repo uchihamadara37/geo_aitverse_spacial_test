@@ -106,7 +106,7 @@ export default function Home() {
         <div className="header-inner">
           <a href="/" className="logo">
             <div className="logo-icon">🛰</div>
-            <span className="logo-text">Geo<span>AIT</span></span>
+            <span className="logo-text">Geo<span>Spacial</span></span>
           </a>
 
           <div className="health-badge">

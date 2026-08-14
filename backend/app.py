@@ -119,6 +119,7 @@ def _run_pipeline(job_id: str, input_tif: str, params: dict) -> None:
             jobs[job_id]["object_count"]  = obj_count
 
     except Exception as exc:
+        print(f"Error di job pipeline {job_id}: {exc}")
         _update("error", f"Error: {exc}", 0)
     finally:
         # Hapus file TIF yang diupload setelah selesai
@@ -255,6 +256,7 @@ def download(job_id: str):
 @app.route("/api/jobs", methods=["GET"])
 def list_jobs():
     """List semua job beserta statusnya."""
+    print("Endpoint /api/jobs dipanggil")
     with jobs_lock:
         result = [
             {
